@@ -49,3 +49,32 @@ import addTwo from "./addTwo";
 import { addTwo } from "./addTwo";
 
 
+# transpiling
+converting some code so that browser can comprehend or supports browser(JSX code to JS code)
+
+# JSX Code
+function Heading(props) {
+    return <h1>{props.title}</h1>
+}
+
+# JS Code
+function Heading(props) {
+  return /*#__PURE__*/React.createElement("h1", null, props.title);
+}
+
+The first argument is the DOM element to render - in this case, an h1 element. The second property is any HTML attribute that should be added, and there's a null here - meaning, there should be an object with some data, but there isn't any data so instead of the object there's the null value. The third property is the contents of the inner HTML of the DOM element specified as the first argument - in this case, the contents of the inner HTML of the h1 element.
+
+# Function component in App.js
+
+function Header(){
+  return <h1>hello world</h1>;
+}
+ function App(){
+  return <Header />;
+ }
+
+ export default App;
+ 
+ # also a valid component code
+ function Example() { return (<h1>Example</h1>) }
+
