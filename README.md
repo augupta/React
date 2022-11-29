@@ -91,6 +91,47 @@ index.js and app.js are used to render the root components of the app.
 
 
 
+# Building a Layout
+The layout you're supposed to build will consist of the following sections:
+
+Main navigation 
+Promo (main advertisement)
+A list of newest posts' previews (intros)
+The footer
+
+# Organizing Your Code
+
+Grouping by features 
+Grouping by file type 
+
+# Building The App
+1 npm init react-app customizing-example
+2 Inspecting the src folder of the starter app, it looks like this:
+  src/
+    App.js
+    App.test.js
+    index.css
+    index.js
+    logo.svg
+    reportWebVitals.js
+    setupTests.js
+3 Then simply add a components folder to it, like this:
+  components/
+4 Since the components folder is currently empty, you can add a component for each of the sections of the typography-focused blog. Here's the structural update:
+  src/
+    components/
+        Nav.js
+        Promo.js
+        Intro1.js
+        Intro2.js
+        Intro3.js
+        Footer.js
+# Building Components
+For now, let’s just build those components. After you've added the components folder, you’ve also added all the functional component files. Since they are all currently empty, you can start adding them, one by one.
+
+# Discussing the Syntax
+className is used in JSX to list one or more CSS classes inplace of class which is used in html to be used on a given element or component.
+DRY approach - that is, the "Don't repeat yourself" approach?
 
 
 
