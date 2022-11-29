@@ -78,3 +78,31 @@ function Header(){
  # also a valid component code
  function Example() { return (<h1>Example</h1>) }
 
+# React folders
+# node_modules
+Repository for all modules of react app
+
+# public
+contains the assets that will be displayed to user in app.
+
+# src
+contains all the essential files to ensure that react app works
+index.js and app.js are used to render the root components of the app.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
