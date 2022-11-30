@@ -10,6 +10,7 @@ function addTwo(a, b) {
 }
 
 # Module Exports
+# Default Export (when function name is same as file name)
 1.  
 export default function addTwo(a, b) {
     console.log(a + b);
@@ -21,7 +22,7 @@ function addTwo(a, b) {
 
 export default addTwo;
 
-# Named Exports
+# Named Export(when function name is different from file name)
 1.
 export function addTwo(a, b) {
     console.log(a + b);
@@ -57,9 +58,21 @@ function Heading(props) {
     return <h1>{props.title}</h1>
 }
 
+function App() { 
+  return (
+    <div>
+    <h1>Hello there</h1> 
+    </div>
+  )
+}
+
 # JS Code
 function Heading(props) {
-  return /*#__PURE__*/React.createElement("h1", null, props.title);
+  return /*#__PURE__*/React.createElement("h1", null/{}, props.title);
+}
+
+function App() {
+  return /*#__PURE__*/React.createElement("div", null/{}, /*#__PURE__*/React.createElement("h1", null/{}, "Hello there"));
 }
 
 The first argument is the DOM element to render - in this case, an h1 element. The second property is any HTML attribute that should be added, and there's a null here - meaning, there should be an object with some data, but there isn't any data so instead of the object there's the null value. The third property is the contents of the inner HTML of the DOM element specified as the first argument - in this case, the contents of the inner HTML of the h1 element.
@@ -105,7 +118,7 @@ Grouping by features
 Grouping by file type 
 
 # Building The App
-1 npm init react-app customizing-example
+1 npm init react-app customizing-example   OR create-react-app customizing-example
 2 Inspecting the src folder of the starter app, it looks like this:
   src/
     App.js
@@ -133,6 +146,60 @@ For now, let’s just build those components. After you've added the components 
 className is used in JSX to list one or more CSS classes inplace of class which is used in html to be used on a given element or component.
 DRY approach - that is, the "Don't repeat yourself" approach?
 
+Recall that much like parameters in a JavaScript function which allow you to pass in values as arguments, React uses properties, or props, to pass data between components. 
+
+# Props and children
+
+function Apples(props) {
+  return (
+    <div className="promo-section">
+        <div>
+            <h2>These apples are: {props.color}</h2>
+            </div>
+            <div>
+            <h3>There are {props.number} apples.</h3>
+        </div>
+    </div>
+  )
+}
+export default Apples
+
+function Pears(props) {
+  return (
+    <h2>I don't like pears, but my friend, {props.friend}, does</h2>
+  )
+}
+export default Pears
+
+function Bag(props) {
+    const bag = {
+        padding: "20px",
+        border: "1px solid gray",
+        background: "#fff",
+        margin: "20px 0"
+    }
+    return (
+        <div style={bag}>
+            {props.children}
+        </div>
+    )
+}
+export default Bag
+
+<Bag children={<Apples color="yellow" number="5" />} />
+<Bag children={<Pears friend="Peter" />} />
+
+Effectively, the above syntax is the same as the two examples below.
+
+<Bag>
+    <Apples color="yellow" number="5" />
+</Bag>
+
+<Bag>
+    <Pears friend="Peter" />
+</Bag>
+
+In the above code, Apples is a prop of the Bag component
 
 
 
