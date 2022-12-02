@@ -118,7 +118,10 @@ Grouping by features
 Grouping by file type 
 
 # Building The App
-1 npm init react-app customizing-example   OR create-react-app customizing-example
+1 npm init react-app customizing-example   (the correct command to build a starter React app to work off of.) 
+OR 
+create-react-app customizing-example   (What is create-react-app? It’s an npm package used to build a boilerplate React app.)
+
 2 Inspecting the src folder of the starter app, it looks like this:
   src/
     App.js
@@ -201,13 +204,98 @@ Effectively, the above syntax is the same as the two examples below.
 
 In the above code, Apples is a prop of the Bag component
 
+# Styling JSX elements
+# In CSS:
+.promo-section {
+    font-weight: bold;
+    line-height: 20px;
+}
+# 
+function Promo(props) {
+    return (
+        <div className="promo-section">
+            <div>
+                <h1 style={{color:"tomato", fontSize:"40px", fontWeight:"bold"}}>
+                    {props.heading}
+                </h1>
+            </div>
+            <div>
+                <h2>{props.promoSubHeading}</h2>
+            </div>
+        </div>
+    );
+}
 
+export default Promo;
+#
+function Promo(props) {
 
+const styles = {
+    color: "tomato",
+    fontSize: "40px"
+}
 
+return (
+        <div className="promo-section">
+            <div>
+                <h1 style={styles}>
+                    {props.heading}
+                </h1>
+            </div>
+            <div>
+                <h2>{props.promoSubHeading}</h2>
+            </div>
+        </div>
+    );
+}
 
+# arrow function
+When an arrow function has a single parameter, you do not need to add parentheses around the item parameter (to the left of the arrow).
+function(item) {
+    return item * 10
+}
+OR
+item => item * 10
 
+# Expressions in HTML Attributes
+const url= "photo.png";
+const result= <img src= {url}></img>;
 
+# Ternary operators and functions in JSX
+let name = 'Bob';
+if (name == 'Bob') {
+    console.log('Hello, Bob');
+} else {
+    console.log('Hello, Friend');
+};
+OR
+let name = 'Bob';
+name == 'Bob' ? console.log('Hello, Bob') : console.log('Hello, Friend');
 
+# Using ternary expressions in JSX
+
+function Example() {
+    return (
+        <div className="heading">
+            <h1>{Math.random() >= 0.5 ? "Over 0.5" : "Under 0.5"}</h1>
+        </div>
+    );
+};
+
+function Example3() {
+
+    const getRandomNum = () => Math.floor(Math.random() * 10) + 1
+
+    return (
+        <div className="heading">
+            <h1>Here's a random number from 0 to 10: { getRandomNum() }</h1>
+        </div>
+    );
+};
+
+# when function has a name and not assigned to any variable called function Attribute and when function doesnt has a name and assigned to variable called function Expression
+
+# div is element
 
 
 
