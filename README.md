@@ -58,7 +58,7 @@ function Heading(props) {
     return <h1>{props.title}</h1>
 }
 
-function App() { 
+function App() {
   return (
     <div>
     <h1>Hello there</h1> 
