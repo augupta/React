@@ -297,8 +297,48 @@ function Example3() {
 
 # div is element
 
+# Parent-child data flow (Props are immutable (cannot be changed).)
+# Parent component:
+function Dog() {
+    return (
+        <Puppy name="Max" bowlShape="square" bowlStatus="full" />
+    );
+};
 
+# Child component:
+function Puppy(props) {
+    return (
+        <div>
+            {props.name} has <Bowl bowlShape="square" bowlStatus="full" />
+        </div>
+    );
+};
 
+# Grandchild component:
+function Bowl(props) {
+    return (
+        <span>
+            {props.bowlShape}-shaped bowl, and it's currently {props.bowlStatus}
+        </span>
+    );
+};
 
+# Updating multiple components mul times by updating just one Object
+const data = { heading: "50% off on all items", callToAction: "Everything must go!" };
+
+function promo(){
+    return (<div>
+        <promoHeading heading={data.heading} callToAction={data.callToAction} />
+    </div>)
+};
+
+function promoHeading(props) {
+    return (
+        <h1>{props.heading}</h1>
+        <h2>{props.callToAction}</h2>
+    )
+};
+
+# 
 
 
