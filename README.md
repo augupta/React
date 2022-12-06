@@ -384,5 +384,34 @@ function promoHeading(props) {
 State data is a component’s internal data, which it can control and mutate. Props data is outside of the component and is immutable, meaning it cannot change.
 
 # Hooks
+# State
+# Statefull(with a hook)<-> Stateless
+function App() {
+  const [word, setWord] = React.useState('eat')
+  return (<div>
+    <Heading message= {word + " at little lema Restobar"} />
+  </div>)
+};
 
+# what if u want to update word 'eat' to 'drink'
+function App() {
+  const [word, setWord] = React.useState('eat');
+  const clickHandler = () => setWord('drink');
+  // function clickHandler() { setWord('drink') };
+  return (<div>
+    <Heading message= {word + " at little lema Restobar"} />
+    <button onClick={clickHandler}>click here</button>
+  </div>)
+};
+
+# The props data is controlled outside of a component, and the state data is controlled by the component itself.
+# The useState hook allows a component to have its own state.
+
+# data transfer to sibling component
+# Instead of prop drilling and lifting state up use React Context API
+# Lifting State up
+ Lifting state up is about cutting the state from the child component and moving it to the parent component's code, with the intent of making the state available in sibling components.
+ 
+# Prop drilling
+prop drilling is a situation where you are passing data from a parent to a child component, then to a grandchild component, and so on, until it reaches a more distant component further down the component tree, where this data is required.
 
