@@ -410,7 +410,7 @@ function App() {
 # data transfer to sibling component
 # Instead of prop drilling and lifting state up use React Context API
 # Lifting State up
- Lifting state up is about cutting the state from the child component and moving it to the parent component's code, with the intent of making the state available in sibling components.
+ Lifting state up is about cutting the state from the child component and moving it to the parent component's code, with the intent of making the state available in sibling components.Lifting up state can sometimes lead to prop drilling, which lowers maintainability and modularity of a React app.
  
 # Prop drilling
 prop drilling is a situation where you are passing data from a parent to a child component, then to a grandchild component, and so on, until it reaches a more distant component further down the component tree, where this data is required.
@@ -455,5 +455,23 @@ function App() {
 }; 
 
 export default App;
+
+# difference between passing Props and Context API
+with the help of props teleporting is done through multiple level of components in parent child chain but with Context API it can be done directly to the destination
+
+# Setting up Context API(An alternative way to working with state in React.)
+Context Provider: Components that store the data
+Consumer Provider:Components that use the data
+
+
+
+
+
+
+
+
+
+
+
 
 
