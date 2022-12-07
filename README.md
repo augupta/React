@@ -193,7 +193,7 @@ export default Bag
 <Bag children={<Pears friend="Peter" />} />
 
 Effectively, the above syntax is the same as the two examples below.
-
+ 
 <Bag>
     <Apples color="yellow" number="5" />
 </Bag>
