@@ -1,3 +1,13 @@
+# React app structure
+The top level directory structure will be as follows:
+
+assets - global static assets such as images, svgs, company logo, etc.
+components - global shared/reusable components, such as layout (wrappers, navigation), form components, buttons
+services - JavaScript modules
+store - Global Redux store
+utils - Utilities, helpers, constants, and the like
+views - Can also be called "pages", the majority of the app would be contained here
+
 # React
 Components are one of the foundations of React
 how to compose layouts by importing components into other components.
