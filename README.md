@@ -63,7 +63,7 @@ import { addTwo } from "./addTwo";
 # transpiling
 converting some code so that browser can comprehend or supports browser(JSX code to JS code)
 
-# JSX Code
+# JSX Code 
 function Heading(props) {
     return <h1>{props.title}</h1>
 }
