@@ -394,6 +394,16 @@ function promoHeading(props) {
 State data is a component’s internal data, which it can control and mutate. Props data is outside of the component and is immutable, meaning it cannot change.
 
 # Hooks
+importReact, {useState} from 'react';
+
+// declaring a state variable
+const[state, setState]= useState(initialState);
+
+// Array destructuring
+// useState hook should be use at the top level of ur component
+// useState can be used to track any kind of DataTransfer(strings, arrays, obj, booleans etc)
+// readability and simplicity to the code are the biggest benefits of hooks
+
 # State
 # Statefull(with a hook)<-> Stateless
 function App() {
