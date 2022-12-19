@@ -1,4 +1,4 @@
-# React app structure
+# React app structure 
 The top level directory structure will be as follows:
 
 assets - global static assets such as images, svgs, company logo, etc.
