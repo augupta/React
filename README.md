@@ -390,6 +390,7 @@ function promoHeading(props) {
     )
 };
 
+
 # Data - 1.Props  2.State
 State data is a component’s internal data, which it can control and mutate. Props data is outside of the component and is immutable, meaning it cannot change.
 
