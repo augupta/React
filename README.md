@@ -1,3 +1,108 @@
+# to check node and npm versions in terminal
+node -v
+npm -v
+# cd..  to move a folder back in terminal
+# cd folder name   to move to the mentioned folder
+# creating a new react app :  npx create-react-app my_app  
+  cd my_app
+  npm start
+# npm init react-app my-app  (the correct command to build a starter React app to work off of.) 
+# ./ to go inside folder
+# ../ to go out folder
+# ../../ to go out of directory
+
+#
+// ReactDOM.render(
+//     <div>
+//         <h1>Heading1</h1>
+//         <p>This is paragraph</p>
+//     </div>,
+//     document.getElementById("root"));
+
+
+// const page=(<div>
+//     <h1>Heading1</h1>
+//     <p>This is paragraph</p>
+//     <NavBar />
+//     <MainContent />
+//     </div>
+// );
+// ReactDOM.render(
+//     page,
+//     document.getElementById("root")
+// );
+
+
+
+// function NavBar(){
+//     return(
+//         <button className="navButton" type="submit">Signup</button>
+//     )
+// }
+// function MainContent(){
+//     return(
+//         <p>Hello</p>
+//     )
+// }
+// ReactDOM.render(
+//     <div>
+//         <h1>Heading1</h1>
+//         <p>This is paragraph</p>
+//         <NavBar />
+//         <MainContent />
+//     </div>,
+//     document.getElementById("root"));
+
+
+// when there is no cdm
+// import React from 'react';
+// import ReactDOM from 'react-dom';
+
+function Header(){
+    return(
+        <div>
+            <nav className='nav'>
+                <img src= "../html_css/binance.jpg" width="40px">
+                </img>
+                <ul className='navList'>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Contact</li>
+                </ul>
+            </nav>
+        </div>
+    );
+}
+function Main(){
+    return(
+        <div>
+            <h1>Fun facts about React</h1>
+            <ul>
+                <li>unordered list items</li>
+                <li>unordered list items</li>
+                <li>unordered list items</li>
+                <li>unordered list items</li>
+            </ul>
+        </div>
+    );
+}
+function Page(){
+    return(
+        <div>
+            <Header />
+            <Main /> 
+        </div>
+    )
+    
+}
+
+ReactDOM.render(
+<Page />,
+document.getElementById("root"));
+
+
+
+
 # React app structure 
 The top level directory structure will be as follows:
 
@@ -186,10 +291,12 @@ export default Pears
 
 function Bag(props) {
     const bag = {
-        padding: "20px",
-        border: "1px solid gray",
-        background: "#fff",
-        margin: "20px 0"
+        maxHeight: "200px",
+        backgroundColor: "rgb(21, 21, 25)",
+        color: "whitesmoke",
+        display: "flex",
+        flexDirection: "row",
+        justifyContent: "space-between"
     }
     return (
         <div style={bag}>
@@ -257,6 +364,33 @@ return (
             </div>
         </div>
     );
+}
+
+#
+export default function Nav(){
+    const navStyle={
+        body:{
+            maxHeight: "200px",
+            backgroundColor: "rgb(21, 21, 25)",
+            color: "cyan",
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "space-between",
+        },
+        imgBar:{
+            display: "flex",
+            flexDirection: "row"
+        }
+    }
+    return(
+        <nav style={navStyle.body} className="navBar">
+            <div style={navStyle.imgBar} className= "imgBar">
+                <img src= "../../../html_css/binance.jpg"></img>
+                <h2>React Facts</h2>
+            </div>
+            <h4>React Course- Project-1</h4>
+        </nav>
+    )
 }
 
 # arrow function
