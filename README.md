@@ -19,6 +19,21 @@ npm -v
 - UI, rest, u can add other libraries 
 
 #
+Decide on Components.
+Decide the state and where it lives.
+What changes when state changes.
+
+# NPM vs Yarn
+Install dependencies from package.json: npm install == yarn
+Install a package and add to package.json: npm install package -save == yarn add package
+Install a devDependency to package.json: npm install package -save-dev == yarn add package-dev
+Remove a dependency from package.json: npm uninstall package-save == yarn remove package
+Upgrade a package to its latest version: npm update-save == yarn upgrade
+Install a package globally: npm install package -g== yarn global add package
+Monsters Rolodes
+5:44
+
+#
 // ReactDOM.render(
 //     <div>
 //         <h1>Heading1</h1>
