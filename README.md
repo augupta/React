@@ -11,6 +11,13 @@ npm -v
 # ../ to go out folder
 # ../../ to go out of directory
 
+
+# React Concepts
+- DOM Manipulation
+- Reusable Components
+- Unidirectional Flow
+- UI, rest, u can add other libraries 
+
 #
 // ReactDOM.render(
 //     <div>
