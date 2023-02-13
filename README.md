@@ -5,7 +5,7 @@ npm -v
 # cd folder name   to move to the mentioned folder
 # creating a new react app :  npx create-react-app my_app  
   cd my_app
-  npm start
+  npm start : to see local host server
 # npm init react-app my-app  (the correct command to build a starter React app to work off of.) 
 # ./ to go inside folder
 # ../ to go out folder
