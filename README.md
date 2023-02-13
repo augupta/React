@@ -6,6 +6,8 @@ npm -v
 # creating a new react app :  npx create-react-app my_app  
   cd my_app
   npm start : to see local host server
+  npm run build : for optimization, it converts all files into one file which is better for users
+  
 # npm init react-app my-app  (the correct command to build a starter React app to work off of.) 
 # ./ to go inside folder
 # ../ to go out folder
@@ -30,8 +32,7 @@ Install a devDependency to package.json: npm install package -save-dev == yarn a
 Remove a dependency from package.json: npm uninstall package-save == yarn remove package
 Upgrade a package to its latest version: npm update-save == yarn upgrade
 Install a package globally: npm install package -g== yarn global add package
-Monsters Rolodes
-5:44
+
 
 #
 // ReactDOM.render(
