@@ -36,6 +36,8 @@ Install a package globally: npm install package -g== yarn global add package
 # Modern way of writing React : Functions with Hooks : function(props, state){}
 # Older way : Class
 
+# whenever using {} under return statement, it means bracket needs js variable which could be EX: this.state.name 
+
 
 #
 // ReactDOM.render(
