@@ -1,8 +1,35 @@
 # to check node and npm versions in terminal
 node -v
 npm -v
+
+# Mac terminal commands
+
+# Basics
+/ (Forward Slash). Top level directory
+. (Single Period)  Current directory
+.. (Double Period)  Parent directory
+~ (Tilde). Home directory
+sudo [command]  Run command with the security privileges of the super user
+nano [file]. Opens the Terminal editor
+open [file]. Opens a file
+[command] -h  Get help about a command
+man [command]. Show the help manual of the command
+
+# Change Directory
+
+cd  Home directory
+cd [folder]  Change directory, e.g. cd Documents
+cd ~  Home directory
+cd/  Root of the drive
+cd -  Previous directory or folder you last browsed
+pwd  Show your working directory
+cd..  Move up to the parent directory
+cd../..  Move up two levels
+
+
 # cd..  to move a folder back in terminal
 # cd folder name   to move to the mentioned folder
+
 # creating a new react app :  npx create-react-app my_app  
   cd my_app
   npm start : to see local host server
