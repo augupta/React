@@ -65,13 +65,23 @@ npm- install packages and execute
 npx- execute without installing
 
 # functional components vs class components  
-functional components- stateless, now can write with state also, componentdidmount doesnt work, can use props, no use of render method, 
+functional components- stateless prev, now can write with state also, componentdidmount doesnt work, can use props, no use of render method, 
 class components - statefull, make use of ES6 class, extends, can use state & props, and lifecycle methods, use render(){}
 
 # Modern way of writing React : Functions with Hooks : function(props, state){}
 # Older way : Class
 
 # whenever using {} under return statement, it means bracket needs js variable which could be EX: this.state.name 
+
+# props vs state
+props get passed to component
+props are immutable
+this.props.name in class components
+props.name in functional components
+
+state is managed within a component
+states can be changed
+states can be used in functional components
 
 
 #
@@ -330,6 +340,7 @@ DRY approach - that is, the "Don't repeat yourself" approach?
 Recall that much like parameters in a JavaScript function which allow you to pass in values as arguments, React uses properties, or props, to pass data between components. 
 
 # Props and children
+props are immutable
 
 function Apples(props) {
   return (
