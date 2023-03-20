@@ -65,8 +65,8 @@ npm- install packages and execute
 npx- execute without installing
 
 # functional components vs class components  
-functional components- stateless, now can write with state also 
-class components - statefull
+functional components- stateless, now can write with state also, componentdidmount doesnt work, can use props, no use of render method, 
+class components - statefull, make use of ES6 class, extends, can use state & props, and lifecycle methods, use render(){}
 
 # Modern way of writing React : Functions with Hooks : function(props, state){}
 # Older way : Class
