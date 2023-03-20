@@ -60,6 +60,14 @@ Remove a dependency from package.json: npm uninstall package-save == yarn remove
 Upgrade a package to its latest version: npm update-save == yarn upgrade
 Install a package globally: npm install package -g== yarn global add package
 
+# npx vs npm
+npm- install packages and execute 
+npx- execute without installing
+
+# functional components vs class components  
+functional components- stateless, now can write with state also 
+class components - statefull
+
 # Modern way of writing React : Functions with Hooks : function(props, state){}
 # Older way : Class
 
