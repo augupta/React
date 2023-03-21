@@ -76,12 +76,13 @@ class components - statefull, make use of ES6 class, extends, can use state & pr
 # props vs state
 props get passed to component
 props are immutable
-this.props.name in class components
 props.name in functional components
 
 state is managed within a component
 states can be changed
 states can be used in functional components
+this.props.name in class components
+
 
 
 #
