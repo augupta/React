@@ -71,7 +71,7 @@ class components - statefull, make use of ES6 class, extends, can use state & pr
 # Modern way of writing React : Functions with Hooks : function(props, state){}
 # Older way : Class
 
-# whenever using {} under return statement, it means bracket needs js variable which could be EX: this.state.name 
+# whenever using {} under return statement, it means bracket needs jsx variable which could be EX: this.state.name 
 
 # props vs state
 props get passed to component
