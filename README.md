@@ -67,6 +67,7 @@ npx- execute without installing
 # functional components vs class components  
 functional components- stateless prev, now can write with state also, componentdidmount doesnt work, can use props, no use of render method, 
 class components - statefull, make use of ES6 class, extends, can use state & props, and lifecycle methods, use render(){}
+                   under class components functions will be written as functionName(){} 
 
 # Modern way of writing React : Functions with Hooks : function(props, state){}
 # Older way : Class
@@ -83,7 +84,9 @@ states can be changed
 states can be used in functional components
 this.props.name in class components
 
-
+# eventHandling - in eventHandling dont call function inside jsx {},means dont use parenthesis, just write function name without bracets
+for class components <button onClick={this.changeEvent}>Click me</button>
+for functional Components <button onClick={changeEvent}>Click me</button>
 
 #
 // ReactDOM.render(
