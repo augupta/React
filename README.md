@@ -97,6 +97,7 @@ for functional Components <button onClick={changeEvent}>Click me</button>
 //     document.getElementById("root"));
 
 
+
 // const page=(<div>
 //     <h1>Heading1</h1>
 //     <p>This is paragraph</p>
