@@ -88,6 +88,9 @@ this.props.name in class components
 for class components <button onClick={this.changeEvent}>Click me</button>
 for functional Components <button onClick={changeEvent}>Click me</button>
 
+# Use of Fragment:
+Fragment used to eliminate div tag in return when there are multiple tags
+
 #
 // ReactDOM.render(
 //     <div>
