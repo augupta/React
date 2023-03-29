@@ -80,6 +80,8 @@ props are immutable
 props.name in functional components
 
 state is managed within a component
+we use state when we want something to change or our react function suppose to give different UI and this happens with the helps of hooks
+bcoz local variable(inside function) cant update for that we need hooks
 states can be changed
 states can be used in functional components
 this.props.name in class components
@@ -90,6 +92,8 @@ for functional Components <button onClick={changeEvent}>Click me</button>
 
 # Use of Fragment:
 Fragment used to eliminate div tag in return when there are multiple tags
+
+# Normal Function gives output and react function gives UI
 
 #
 // ReactDOM.render(
