@@ -86,6 +86,8 @@ state can never be used directly, always use inside the setter
 states can be changed
 states can be used in functional components
 this.props.name in class components
+state gets updated asynchonously, that means after func gets run then react decided to update state
+whenever state gets updated, function renders again
 
 # eventHandling - in eventHandling dont call function inside jsx {},means dont use parenthesis, just write function name without bracets
 for class components <button onClick={this.changeEvent}>Click me</button>
