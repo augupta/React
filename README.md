@@ -25,7 +25,7 @@ cd -  Previous directory or folder you last browsed
 pwd  Show your working directory
 cd..  Move up to the parent directory
 cd../..  Move up two levels
-
+ 
 
 # cd..  to move a folder back in terminal
 # cd folder name   to move to the mentioned folder
@@ -82,6 +82,7 @@ props.name in functional components
 state is managed within a component
 we use state when we want something to change or our react function suppose to give different UI and this happens with the helps of hooks
 bcoz local variable(inside function) cant update for that we need hooks
+state can never be used directly, always use inside the setter
 states can be changed
 states can be used in functional components
 this.props.name in class components
