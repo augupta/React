@@ -78,6 +78,7 @@ class components - statefull, make use of ES6 class, extends, can use state & pr
 props get passed to component
 props are immutable
 props.name in functional components
+prpos moves parent to child(downwards)
 
 state is managed within a component
 we use state when we want something to change or our react function suppose to give different UI and this happens with the helps of hooks
@@ -88,6 +89,8 @@ states can be used in functional components
 this.props.name in class components
 state gets updated asynchonously, that means after func gets run then react decided to update state
 whenever state gets updated, function renders again
+state moves from child to parent or child to sibling
+
 
 # eventHandling - in eventHandling dont call function inside jsx {},means dont use parenthesis, just write function name without bracets
 for class components <button onClick={this.changeEvent}>Click me</button>
