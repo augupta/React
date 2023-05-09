@@ -64,6 +64,45 @@ Install a package globally: npm install package -g== yarn global add package
 npm- install packages and execute 
 npx- execute without installing
 
+
+# React lets you create components, reusable UI elements for your app.
+
+In a React app, every piece of UI is a component.
+
+React components are regular JavaScript functions except:
+
+Their names always begin with a capital letter.
+They return JSX markup.
+
+
+# 🔴 Never define a component inside another component! 
+export default function Gallery() {
+  function Profile() {
+    // ...
+  }
+  // ...
+}
+
+# The snippet above is very slow and causes bugs. Instead, define every component at the top level:
+export default function Gallery() {
+  // ...
+}
+
+// ✅ Declare components at the top level
+function Profile() {
+  // ...
+}
+
+# When a child component needs some data from a parent, pass it by props instead of nesting definitions.
+
+# How you export your component dictates how you must import it. You will get an error if you try to import a default export the same way you would a named export! This chart can help you keep track:
+
+Syntax	Export statement	Import statement:
+Default:	export default function Button() {}	-> import Button from './Button.js';
+Named:	export function Button() {}	 ->   import { Button } from './Button.js';
+
+#  A file can only have one default export, but it can have numerous named exports!
+
 # functional components vs class components  
 functional components- stateless prev, now can write with state also, componentdidmount doesnt work, can use props, no use of render method, 
 class components - statefull, make use of ES6 class, extends, can use state & props, and lifecycle methods, use render(){}
