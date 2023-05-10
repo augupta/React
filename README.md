@@ -113,11 +113,16 @@ class components - statefull, make use of ES6 class, extends, can use state & pr
 
 # whenever using {} under return statement, it means bracket needs jsx variable which could be EX: this.state.name 
 
+# Passing Props to a Component
+React components use props to communicate with each other. Every parent component can pass some information to its child components by giving them props. Props might remind you of HTML attributes, but you can pass any JavaScript value through them, including objects, arrays, and functions.
+
 # props vs state
 props get passed to component
 props are immutable
 props.name in functional components
 prpos moves parent to child(downwards)
+You can’t change props. When you need interactivity, you’ll need to set state.
+
 
 state is managed within a component
 we use state when we want something to change or our react function suppose to give different UI and this happens with the helps of hooks
