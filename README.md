@@ -102,6 +102,47 @@ Default:	export default function Button() {}	-> import Button from './Button.js'
 Named:	export function Button() {}	 ->   import { Button } from './Button.js';
 
 #  A file can only have one default export, but it can have numerous named exports!
+# A component must be pure, meaning:
+# It minds its own business. It should not change any objects or variables that existed before rendering.
+# Same inputs, same output. Given the same inputs, a component should always return the same JSX.
+# Rendering can happen at any time, so components should not depend on each others’ rendering sequence.
+# You should not mutate any of the inputs that your components use for rendering. That includes props, state, and context. To update the screen, “set” state instead of mutating preexisting objects. Pure functions don’t mutate variables outside of the function’s scope or objects that were created before the call—that makes them impure! it’s completely fine to change variables and objects that you’ve just created while rendering. 
+# Wrong Practice
+let guest = 0;
+
+function Cup() {
+  // Bad: changing a preexisting variable!
+  guest = guest + 1;
+  return <h2>Tea cup for guest #{guest}</h2>;
+}
+
+export default function TeaSet() {
+  return (
+    <>
+      <Cup />
+      <Cup />
+      <Cup />
+    </>
+  );
+}
+
+# Right Practice
+function Cup({ guest }) {
+  return <h2>Tea cup for guest #{guest}</h2>;
+}
+
+export default function TeaGathering() {
+  let cups = [];
+  for (let i = 1; i <= 12; i++) {
+    cups.push(<Cup key={i} guest={i} />);
+  }
+  return cups;
+}
+
+
+# Strive to express your component’s logic in the JSX you return. When you need to “change things”, you’ll usually want to do it in an event handler. As a last resort, you can useEffect.
+# Writing pure functions takes a bit of practice, but it unlocks the power of React’s paradigm.
+
 
 # functional components vs class components  
 functional components- stateless prev, now can write with state also, componentdidmount doesnt work, can use props, no use of render method, 
