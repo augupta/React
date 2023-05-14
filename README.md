@@ -139,9 +139,28 @@ export default function TeaGathering() {
   return cups;
 }
 
-
 # Strive to express your component’s logic in the JSX you return. When you need to “change things”, you’ll usually want to do it in an event handler. As a last resort, you can useEffect.
 # Writing pure functions takes a bit of practice, but it unlocks the power of React’s paradigm.
+
+# Adding event handlers 
+1. To add an event handler, you will first define a function and then pass it as a prop to the appropriate JSX tag.
+2. Declare a function called handleClick inside your Button component.
+3. Implement the logic inside that function (use alert to show the message).
+4. Add onClick={handleClick} to the <button> JSX.
+
+export default function Button() {
+  function handleClick() {
+    alert('You clicked me!');
+  }
+
+  return (
+    <button onClick={handleClick}>
+      Click me
+    </button>
+  );
+}
+
+ 
 
 
 # functional components vs class components  
