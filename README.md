@@ -160,9 +160,26 @@ export default function Button() {
   );
 }
 
+# Alternatively, you can define an event handler inline in the JSX:
+
+<button onClick={function handleClick() {
+  alert('You clicked me!');
+}}>
+Or, more concisely, using an arrow function:
+
+<button onClick={() => {
+  alert('You clicked me!');
+}}>
+
+# Functions passed to event handlers must be passed, not called. For example:
+passing a function (correct)	calling a function (incorrect)
+<button onClick={handleClick}>	<button onClick={handleClick()}>
+
+The difference is subtle. In the first example, the handleClick function is passed as an onClick event handler. This tells React to remember it and only call your function when the user clicks the button.
+
+In the second example, the () at the end of handleClick() fires the function immediately during rendering, without any clicks. This is because JavaScript inside the JSX { and } executes right away. 
  
-
-
+ 
 # functional components vs class components  
 functional components- stateless prev, now can write with state also, componentdidmount doesnt work, can use props, no use of render method, 
 class components - statefull, make use of ES6 class, extends, can use state & props, and lifecycle methods, use render(){}
